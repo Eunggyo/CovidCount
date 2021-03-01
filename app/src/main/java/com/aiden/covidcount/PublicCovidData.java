@@ -3,6 +3,8 @@ package com.aiden.covidcount;
 import android.os.AsyncTask;
 
 import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
@@ -21,8 +23,9 @@ public class PublicCovidData extends AsyncTask {
     private DocumentBuilderFactory mDBFactory = null;
     private DocumentBuilder mDocumentBuilder = null;
     private Document mDocument = null;
+    private Element mElement = null;
     private NodeList mParsingTag = null;
-
+    private Node mNode = null;
     @Override
     protected Object doInBackground(Object[] objects) {
         return null;
@@ -43,7 +46,9 @@ public class PublicCovidData extends AsyncTask {
 
         try {
             mDocumentBuilder = mDBFactory.newDocumentBuilder();
-            mDocument = mDocumentBuilder.parse("url");
+            mDocument = mDocumentBuilder.parse(Config.COVID_URL);
+            mElement = mDocument.getDocumentElement();
+            mParsingTag = mElement.getElementsByTagName("deathCnt");
         }catch (ParserConfigurationException pce) {
             pce.printStackTrace();
         }catch (IOException ioe) {
