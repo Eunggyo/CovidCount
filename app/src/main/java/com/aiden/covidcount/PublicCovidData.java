@@ -1,6 +1,7 @@
 package com.aiden.covidcount;
 
 import android.os.AsyncTask;
+import android.util.Log;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -28,6 +29,7 @@ public class PublicCovidData extends AsyncTask {
     private Node mNode = null;
     @Override
     protected Object doInBackground(Object[] objects) {
+        parseData();
         return null;
     }
 
@@ -41,20 +43,17 @@ public class PublicCovidData extends AsyncTask {
         super.onProgressUpdate(values);
     }
 
-    private void parseData() {
+    public void parseData() {
         mDBFactory = DocumentBuilderFactory.newInstance();
 
         try {
             mDocumentBuilder = mDBFactory.newDocumentBuilder();
-            mDocument = mDocumentBuilder.parse(Config.COVID_URL);
+
             mElement = mDocument.getDocumentElement();
             mParsingTag = mElement.getElementsByTagName("deathCnt");
+            Log.e("KEG","mParsingTag length = "+ mParsingTag.getLength());
         }catch (ParserConfigurationException pce) {
             pce.printStackTrace();
-        }catch (IOException ioe) {
-            ioe.printStackTrace();
-        }catch (SAXException sae) {
-            sae.printStackTrace();
         }
     }
 }
