@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<item>
+		<description>KBS</description>
+		<guid isPermaLink="false">kbshd</guid>
+		<title>KBS</title>
+		<link/>
+		<media:credit>kbsworld</media:credit>
+		<media:rating/>
+		<rayvmedia:isonline>True</rayvmedia:isonline>
+		<media:thumbnail url="http://open.kbs.co.kr/kor/m/resources/images/kbs-intro/sub/img-ci-2.jpg" height="72" width="95"/>
+		<media:thumbnail url="http://open.kbs.co.kr/kor/m/resources/images/kbs-intro/sub/img-ci-2.jpg" height="240" width="427"/>
+		<media:group>
+		<media:content type="video/mpeg" url="" isDefault="false" bitrate="300000" width="1080" lang="en">
+		<rayvmedia:guid>kbshd250</rayvmedia:guid>
+		<rayvmedia:medium>live/rayv</rayvmedia:medium>
+		<rayvmedia:secured>False</rayvmedia:secured>
+		</media:content>
+		<media:content type="video/mpeg" url="" isDefault="false" bitrate="500000" width="1080" lang="en">
+		<rayvmedia:guid>kbshd500</rayvmedia:guid>
+		<rayvmedia:medium>live/rayv</rayvmedia:medium>
+		<rayvmedia:secured>False</rayvmedia:secured>
+		</media:content>
+		<media:content type="video/mpeg" url="" isDefault="false" bitrate="800000" width="1080" lang="en">
+		<rayvmedia:guid>kbshd1200</rayvmedia:guid>
+		<rayvmedia:medium>live/rayv</rayvmedia:medium>
+		<rayvmedia:secured>False</rayvmedia:secured>
+		</media:content>
+		</media:group>
+	</item>
+
+
+
+
